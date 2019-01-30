@@ -6,7 +6,7 @@ var { InMemoryCache } = require('apollo-cache-inmemory');
 var { HttpLink } = require('apollo-link-http');
 var  gql  = require("graphql-tag");
 var fetch = require('node-fetch');
-const port = 5000
+const port = process.env.PORT ||5000
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
