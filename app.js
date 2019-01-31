@@ -43,9 +43,7 @@ client
   } }`
   })
   .then(result =>{
-    //console.log(result.data.all_product.items[0].featured_image)    
     res.render('./home', result)
-    //console.log(result.data.all_product.items)
   })
 );
 

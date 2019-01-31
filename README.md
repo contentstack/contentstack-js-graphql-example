@@ -8,7 +8,8 @@ This is an example app built using Contentstack GraphQL with Apollo javascript S
 
 Perform the steps given below to get started with this app.
 
-<img src='https://github.com/contentstack/contentstack-ios-graphql-example/raw/master/contentstack-graphql-example-app/ProductList.png' width='320' height='690'/>
+
+<img src='https://github.com/contentstack/contentstack-js-graphql-example/raw/master/views/product_list.png' width='320' height='690'/>
 
 
 ## Prerequisite
@@ -41,7 +42,7 @@ Now that we have created the sample data, it’s time to use and configure the p
 To get your app up and running quickly, we have created a sample javascript app for this project. You need to download it and change the configuration. Download the app using the command given below:
 
 ```
-$ git clone https://github.com/contentstack/contentstack-ios-graphql-example.git
+$ git clone https://github.com/contentstack/contentstack-js-graphql-example.git
 ```
 
 ## Step 6: Install Apollo framework
@@ -85,7 +86,7 @@ const client = new ApolloClient({
 
 Contentstack provides a GraphQL playground, which is a GraphiQL interface, to test your GraphQL queries in your browser. Use this interface to write and test your queries.
 
-Open a browser of your choice and hit the URL given below:
+Open a browser of your choice and hit the URL given below after inserting api_key, access_token, environment in url:
 ```
 https://graphql.contentstack.io/stacks/api_key/explore?access_token=environment-specific_delivery_token&environment=environment_name
   ```
@@ -95,7 +96,6 @@ https://graphql.contentstack.io/stacks/api_key/explore?access_token=environment-
 To fetch all entries of ‘Product’ content type, add the following code snippet in the server file(app.js).
 
 ```
-// ... above is the instantiation of the client object.
 client
  .query({
   query: gql`query { all_product{
