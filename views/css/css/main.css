@@ -188,7 +188,7 @@ header .logo {
 }
 .thumbnail-box ul li .thum-img img {
   width: 100%;
-  height: auto;
+  height: 300px;
   display: block;
   max-width: 100%;
 }
@@ -258,7 +258,7 @@ font-weight: 700;
 }
 footer {
   background: #f8fafc;
-  padding: 70px 0 0;
+  padding: 20px 0 15px;
   color: #4d4d51;
   font-size: 14px;
   font-weight: 600;
@@ -273,21 +273,27 @@ footer span.ft-logo {
 }
 @media (max-width: 1200px) {
   .container {
-    width: 1140px;
+    max-width: 1140px;
   }
 }
 @media (max-width: 992px) {
   .container {
-    width: 960px;
+    max-width: 960px;
   }
 }
 @media (max-width: 768px) {
   .container {
-    width: 720px;
+    max-width: 720px;
+  }
+  .thumbnail-box ul li {
+    flex-basis: 48%;
   }
 }
 @media (max-width: 576px) {
   .container {
-    width: 540px;
+    max-width: 540px;
   }
+  .thumbnail-box ul li {
+  	    flex-basis: 98%;
+	  }	
 }
