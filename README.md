@@ -89,7 +89,7 @@ Contentstack provides a GraphQL playground, which is a GraphiQL interface, to te
 
 Open a browser of your choice and hit the URL given below after inserting api_key, access_token, environment in url:
 ```
-https://graphql.contentstack.io/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
+https://graphql.contentstack.io/stacks/api_key/explore?access_token=environment-specific_delivery_token&environment=environment_name
   ```
 
 
