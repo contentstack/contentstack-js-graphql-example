@@ -2,7 +2,7 @@
 
 # Build an example app using Contentstack GraphQL and Apollo Javascript SDK
 
-Apollo Javascript is strongly-typed, caching GraphQL client for javascript apps. It lets you execute queries against a GraphQL server by integrating a GraphQL client library that handles sending GraphQL queries and parsing the corresponding responses.
+We have created a sample product catalog app that is built using Contentstack’s iOS SDK. The content of this app is powered by Contentstack GraphQL APIs, and the app uses Apollo client on the client side to consume GraphQL APIs. 
 
 This is an example app built using Contentstack GraphQL with Apollo javascript SDK. You can try out and play with this example app, before building bigger and better applications.
 
