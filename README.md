@@ -8,7 +8,7 @@ This is an example app built using Contentstack GraphQL with Apollo javascript S
 
 Perform the steps given below to get started with this app.
 
-<img src='https://github.com/contentstack/contentstack-js-graphql-example/blob/master/views/images/product_list.png' width='95%' height='700'/>
+<img src='https://github.com/contentstack/contentstack-js-graphql-example/blob/master/views/images/product_list.png' width='95%'/>
 
 
 ## Prerequisite
