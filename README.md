@@ -52,7 +52,9 @@ Begin by including packages that are essential for building the Apollo app. Inst
  -   [Graphql-tag](https://www.npmjs.com/package/graphql-tag)
 
 ## Step 7: Add modules in server file to invoke Apollo
-In order to invoke Apollo as part of the JavaScript, add the following modules to the server file, app.js. The modules include express and express-nunjucks module for routing and templating:
+In order to invoke Apollo as part of the JavaScript and for routing and templating purpose, add the  express and express-nunjucks modules to the server file, app.js.
+
+Add the ‘apollo-client’ and ‘apollo-cache-inmemory’ parameters in ‘apollo-client’ instance.
 
 ```
 const express = require('express');
