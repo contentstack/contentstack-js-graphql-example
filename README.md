@@ -118,6 +118,6 @@ Now that we have a working project, you can build and run it.
 
 ## More Resources
 
-- [Getting started with JavaScript SDK](https://www.contentstack.com/docs/platforms/javascript)
+- [Getting started with JavaScript SDK](https://www.contentstack.com/docs/platforms/javascript-browser)
 - [Using GraphQL queries with JavaScript SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-contentstack-javascript-sdk)
 - [GraphQL API documentation](https://www.contentstack.com/docs/apis/graphql-content-delivery-api/)
