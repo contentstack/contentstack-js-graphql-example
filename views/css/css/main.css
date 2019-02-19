@@ -152,7 +152,7 @@ a {
 }
 
 .row li {
- display: none;
+ display: block;
 }
 
 header {
