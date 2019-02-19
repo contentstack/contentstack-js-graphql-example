@@ -6,11 +6,11 @@ var { InMemoryCache } = require('apollo-cache-inmemory');
 var { HttpLink } = require('apollo-link-http');
 var  gql  = require("graphql-tag");
 var fetch = require('node-fetch');
-const port = process.env.PORT ||5000
+const port = process.env.PORT || 8000
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'https://dev-graphql.contentstack.io/stacks/blt44d915c18f115370/explore?access_token=cs551d666a332e455a34174bd0&environment=production',
+  uri: "https://graphql.contentstack.com/stacks/blt292960b854e5170e?access_token=csf77a123fda5cc627a0363a49&environment=development",
   fetch
 })
 const client = new ApolloClient({
@@ -43,6 +43,7 @@ client
   } }`
   })
   .then(result =>{
+   // console.log("endpoint>>>>>>>>>", JSON.stringify(result, null, 0))
     res.render('./home', result)
   })
 );

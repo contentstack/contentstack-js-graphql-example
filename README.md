@@ -2,9 +2,9 @@
 
 # Build an example app using Contentstack GraphQL and Apollo Javascript SDK
 
-Apollo Javascript is strongly-typed, caching GraphQL client for javascript apps. It lets you execute queries against a GraphQL server by integrating a GraphQL client library that handles sending GraphQL queries and parsing the corresponding responses.
+We have created a sample product catalog app that is built using Contentstack’s iOS SDK. The content of this app is powered by Contentstack GraphQL APIs, and the app uses Apollo client on the client side to consume GraphQL APIs.
 
-This is an example app built using Contentstack GraphQL with Apollo javascript SDK. You can try out and play with this example app, before building bigger and better applications.
+This document covers the steps to get this app up and running for you. Try out the app and play with it, before building bigger and better applications.
 
 Perform the steps given below to get started with this app.
 
@@ -52,7 +52,9 @@ Begin by including packages that are essential for building the Apollo app. Inst
  -   [Graphql-tag](https://www.npmjs.com/package/graphql-tag)
 
 ## Step 7: Add modules in server file to invoke Apollo
-In order to invoke Apollo as part of the JavaScript, add the following modules to the server file, app.js. The modules include express and express-nunjucks module for routing and templating:
+In order to invoke Apollo as part of the JavaScript and for routing and templating purpose, add the  express and express-nunjucks modules to the server file, app.js
+
+Add the ‘apollo-client’ and ‘apollo-cache-inmemory’ parameters in ‘apollo-client’ instance. 
 
 ```
 const express = require('express');
@@ -66,7 +68,7 @@ var fetch = require('node-fetch');
 ```
 
 ## step 8: Create an Apollo Client
-Create a single shared instance of 'Apollo-link' and point it at your GraphQL server. Add the ‘apollo-client’ and ‘apollo-memory’ parameters in ‘apollo-client’ instance. Under the HttpLink module instance, set the URL of GraphQL schema under the uri parameter and use fetch to fetch the data from graphql API.
+Create a single shared instance of 'Apollo-link' and point it at your GraphQL server. Under the HttpLink module instance, set the URL of GraphQL schema under the uri parameter and use fetch to fetch the data from graphql API.
 
 ```
 const cache = new InMemoryCache();
@@ -85,7 +87,7 @@ const client = new ApolloClient({
 
 Contentstack provides a GraphQL playground, which is a GraphiQL interface, to test your GraphQL queries in your browser. Use this interface to write and test your queries.
 
-Open a browser of your choice and hit the URL given below after inserting api_key, access_token, environment in url:
+Open a browser of your choice and hit the URL given below:
 ```
 https://graphql.contentstack.io/stacks/api_key/explore?access_token=environment-specific_delivery_token&environment=environment_name
   ```
