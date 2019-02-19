@@ -2,13 +2,13 @@
 
 # Build an example app using Contentstack GraphQL and Apollo Javascript SDK
 
-We have created a sample product catalog app that is built using Contentstack’s iOS SDK. The content of this app is powered by Contentstack GraphQL APIs, and the app uses Apollo client on the client side to consume GraphQL APIs.
+We have created a sample product catalog app that is built using Contentstack’s Apollo client SDK. The content of this app is powered by Contentstack GraphQL APIs, and the app uses Apollo client on the client side to consume GraphQL APIs. 
 
 This document covers the steps to get this app up and running for you. Try out the app and play with it, before building bigger and better applications.
 
 Perform the steps given below to get started with this app.
 
-<img src='https://github.com/contentstack/contentstack-js-graphql-example/blob/master/views/images/product_list.png' width='95%' height='700'/>
+<img src='https://github.com/contentstack/contentstack-js-graphql-example/blob/master/views/images/product_list.png' width='95%'/>
 
 
 ## Prerequisite
@@ -52,9 +52,9 @@ Begin by including packages that are essential for building the Apollo app. Inst
  -   [Graphql-tag](https://www.npmjs.com/package/graphql-tag)
 
 ## Step 7: Add modules in server file to invoke Apollo
-In order to invoke Apollo as part of the JavaScript and for routing and templating purpose, add the  express and express-nunjucks modules to the server file, app.js
+In order to invoke Apollo as part of the JavaScript and for routing and templating purpose, add the  express and express-nunjucks modules to the server file, app.js.
 
-Add the ‘apollo-client’ and ‘apollo-cache-inmemory’ parameters in ‘apollo-client’ instance. 
+Add the ‘apollo-client’ and ‘apollo-cache-inmemory’ parameters in ‘apollo-client’ instance.
 
 ```
 const express = require('express');
@@ -73,7 +73,7 @@ Create a single shared instance of 'Apollo-link' and point it at your GraphQL se
 ```
 const cache = new InMemoryCache();
 const link = new HttpLink({
-uri:'https://dev-graphql.contentstack.io/stacks/blt44d915c18f115370/explor  e?access_token=cs551d666a332e455a34174bd0&environment=production',
+uri:'https://graphql.contentstack.io/stacks/blt44d915c18f115370?access_token=cs551d666a332e455a34174bd0&environment=production',
  fetch
 })
 const client = new ApolloClient({
@@ -115,3 +115,9 @@ The query will return the data for only the specific fields(‘title’, ‘desc
 
 ## Step 11:  Build and run your application
 Now that we have a working project, you can build and run it.
+
+## More Resources
+
+- [Getting started with JavaScript SDK](https://www.contentstack.com/docs/platforms/javascript-browser)
+- [Using GraphQL queries with JavaScript SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-contentstack-javascript-sdk)
+- [GraphQL API documentation](https://www.contentstack.com/docs/apis/graphql-content-delivery-api/)
