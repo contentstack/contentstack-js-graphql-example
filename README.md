@@ -27,7 +27,7 @@ For this app, we need one content type: Product. Here’s what it is needed for:
 
 -   **Product**: Lets you add the product content into your app.  
 
-For quick integration, we have already created the content type. [Download the content types](https://github.com/contentstack/contentstack-ios-graphql-example/raw/master/contentstack-graphql-example-app/ContentTypes.zip) and [import](https://www.contentstack.com/docs/guide/content-types#importing-a-content-type) it to your stack. (If needed, you can [create your own content types](https://www.contentstack.com/docs/guide/content-types#creating-a-content-type). Read more about [Content Types](https://www.contentstack.com/docs/guide/content-types).)
+For quick integration, we have already created the content type. [Download the content types](https://github.com/contentstack/contentstack-js-graphql-example/raw/master/ContentTypes.zip) and [import](https://www.contentstack.com/docs/guide/content-types#importing-a-content-type) it to your stack. (If needed, you can [create your own content types](https://www.contentstack.com/docs/guide/content-types#creating-a-content-type). Read more about [Content Types](https://www.contentstack.com/docs/guide/content-types).)
 
 
 
@@ -76,7 +76,7 @@ Create a single shared instance of 'Apollo-link' and point it at your GraphQL se
 ```
 const cache = new InMemoryCache();
 const link = new HttpLink({
-uri:'https://graphql.contentstack.io/stacks/***REMOVED***?access_token=***REMOVED***&environment=production',
+uri:'https://graphql.contentstack.com/stacks/***REMOVED***?access_token=***REMOVED***&environment=production',
  fetch
 })
 const client = new ApolloClient({
@@ -92,7 +92,7 @@ Contentstack provides a GraphQL playground, which is a GraphiQL interface, to te
 
 Open a browser of your choice and hit the URL given below:
 ```
-https://graphql.contentstack.io/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
+https://graphql.contentstack.com/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
   ```
 
 
