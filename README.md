@@ -44,6 +44,9 @@ To get your app up and running quickly, we have created a sample javascript app 
 $ git clone https://github.com/contentstack/contentstack-js-graphql-example.git
 ```
 
+Once you have downloaded the project, add your Contentstack API Key, Delivery Token, and Environment to the project during the SDK initialization step. (Learn how to find your Stack's [API Key and Delivery Token](https://www.contentstack.com/docs/guide/stack#edit-a-stack). Read more about [Environments](https://www.contentstack.com/docs/guide/environments).)
+
+
 ## Step 6: Install Apollo framework
 Begin by including packages that are essential for building the Apollo app. Install the following modules using the npm install command. Refer the [Installation](https://www.apollographql.com/docs/ios/installation.html#installing-framework) doc for more information.
  -   [Apollo-client](https://www.npmjs.com/package/apollo-client)
@@ -89,7 +92,7 @@ Contentstack provides a GraphQL playground, which is a GraphiQL interface, to te
 
 Open a browser of your choice and hit the URL given below:
 ```
-https://graphql.contentstack.io/stacks/api_key/explore?access_token=environment-specific_delivery_token&environment=environment_name
+https://graphql.contentstack.io/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
   ```
 
 
@@ -114,10 +117,14 @@ The query will return the data for only the specific fields(‘title’, ‘desc
 
 
 ## Step 11:  Build and run your application
-Now that we have a working project, you can build and run it.
+Now that we have a working project, you can build and run it using following commands.
+ - npm install
+ - node app.js
+
+
 
 ## More Resources
 
 - [Getting started with JavaScript SDK](https://www.contentstack.com/docs/platforms/javascript-browser)
-- [Using GraphQL queries with JavaScript SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-contentstack-javascript-sdk)
+- [Using GraphQL queries with contentstack Apollo SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-contentstack-javascript-sdk)
 - [GraphQL API documentation](https://www.contentstack.com/docs/apis/graphql-content-delivery-api/)
