@@ -126,5 +126,5 @@ Now that we have a working project, you can build and run it using following com
 ## More Resources
 
 - [Getting started with JavaScript SDK](https://www.contentstack.com/docs/platforms/javascript-browser)
-- [Using GraphQL queries with contentstack Apollo SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-contentstack-javascript-sdk)
+- [Using GraphQL queries with Apollo Client JavaScript SDK](https://www.contentstack.com/docs/guide/contentstack-graphql-api/using-graphql-with-apollo-client-javascript-sdk)
 - [GraphQL API documentation](https://www.contentstack.com/docs/apis/graphql-content-delivery-api/)
