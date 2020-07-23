@@ -42,7 +42,7 @@
 					<ul>
 			{% for data in data.all_product.items %}
 						<li>
-							<span class="thum-img moreBox blogBox"><img src={{data.featured_image[0].url}} alt="one"></span>
+							<span class="thum-img moreBox blogBox"><img src={{data.featured_imageConnection.edges[0].node.url}} alt="one"></span>
 							<div class="thumbnail-detail">
 								<h3><a href="#">{{data.title}} </a></h3>
 							</div>
