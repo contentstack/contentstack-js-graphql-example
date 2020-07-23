@@ -49,24 +49,16 @@ Once you have downloaded the project, add your Contentstack API Key, Delivery To
 
 ## Step 6: Install Apollo framework
 Begin by including packages that are essential for building the Apollo app. Install the following modules using the npm install command. Refer the [Installation](https://www.apollographql.com/docs/ios/installation.html#installing-framework) doc for more information.
- -   [Apollo-client](https://www.npmjs.com/package/apollo-client)
- -   [Apollo-cache-inmemory](https://www.npmjs.com/package/apollo-cache-inmemory)
- -   [Apollo-link-http](https://www.npmjs.com/package/apollo-link-http)
- -   [Graphql-tag](https://www.npmjs.com/package/graphql-tag)
+ -   [Apollo-client](https://www.npmjs.com/package/@apollo/client)
 
 ## Step 7: Add modules in server file to invoke Apollo
 In order to invoke Apollo as part of the JavaScript and for routing and templating purpose, add the  express and express-nunjucks modules to the server file, app.js.
 
-Add the ‘apollo-client’ and ‘apollo-cache-inmemory’ parameters in ‘apollo-client’ instance.
-
 ```
 const express = require('express');
-const expressNunjucks = require('express-nunjucks')
-const app = express();
-var { ApolloClient } =  require('apollo-client');
-var { InMemoryCache } = require('apollo-cache-inmemory');
-var { HttpLink } = require('apollo-link-http');
-var  gql  = require("graphql-tag");
+const expressNunjucks = require('express-nunjucks');
+const app = express()
+var { ApolloClient, InMemoryCache, HttpLink,from, gql } =  require('@apollo/client');
 var fetch = require('node-fetch');
 ```
 
@@ -76,13 +68,16 @@ Create a single shared instance of 'Apollo-link' and point it at your GraphQL se
 ```
 const cache = new InMemoryCache();
 const link = new HttpLink({
-uri:'https://graphql.contentstack.com/stacks/blt44d915c18f115370?access_token=cs551d666a332e455a34174bd0&environment=production',
- fetch
-})
+  uri: 'https://graphql.contentstack.com/stacks/<API_KEY>?environment=<ENVIRONMENT_NAME>',
+  headers: {
+    access_token: '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>',
+  },
+  fetch
+});
 const client = new ApolloClient({
+  link: from([link]),
   cache,
-  link
-})
+});
 ```
 
 
@@ -102,10 +97,22 @@ To fetch all entries of ‘Product’ content type, add the following code snipp
 ```
 client
  .query({
-  query: gql`query { all_product{
-    title
-    description
-  } }`,
+  query: gql`query {
+    all_product(locale: "en-us") {
+      items {
+        title
+        description
+        price
+        featured_imageConnection(limit: 10) {
+          edges {
+            node {
+              url
+            }
+          }
+        }
+      }
+    }
+  }`,
   .then(result =>
    res.render('./index', result)
    //console.log(result.data.all_product.items)
