@@ -15,7 +15,7 @@
     "express-nunjucks": "^2.2.3",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
-    "node-fetch": "^2.3.0",
+    "node-fetch": "^2.6.1",
     "nunjucks": "^3.2.2"
   },
   "devDependencies": {
