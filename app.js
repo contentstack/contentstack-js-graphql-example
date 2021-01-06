@@ -5,7 +5,7 @@ var { ApolloClient, InMemoryCache, HttpLink,from, gql } =  require('@apollo/clie
 var fetch = require('node-fetch');
 const port = process.env.PORT || 8000
 const GRAPHQL_ENDPOINT =
-  'https://graphql.contentstack.com/v1/stacks/<API_KEY>?environment=<ENVIRONMENT_NAME>';
+  'https://graphql.contentstack.com/stacks/<API_KEY>?environment=<ENVIRONMENT_NAME>';
 
 const cache = new InMemoryCache();
 const link = new HttpLink({
