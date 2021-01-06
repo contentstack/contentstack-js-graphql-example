@@ -68,7 +68,7 @@ Create a single shared instance of 'Apollo-link' and point it at your GraphQL se
 ```
 const cache = new InMemoryCache();
 const link = new HttpLink({
-  uri: 'https://graphql.contentstack.com/v1/stacks/<API_KEY>?environment=<ENVIRONMENT_NAME>',
+  uri: 'https://graphql.contentstack.com/stacks/<API_KEY>?environment=<ENVIRONMENT_NAME>',
   headers: {
     access_token: '<ENVIRONMENT_SPECIFIC_DELIVERY_TOKEN>',
   },
@@ -87,7 +87,7 @@ Contentstack provides a GraphQL playground, which is a GraphiQL interface, to te
 
 Open a browser of your choice and hit the URL given below:
 ```
-https://graphql.contentstack.com/v1/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
+https://graphql.contentstack.com/stacks/api_key?access_token=environment-specific_delivery_token&environment=environment_name
   ```
 
 
