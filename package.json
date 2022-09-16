@@ -14,7 +14,7 @@
     "express": "^4.16.4",
     "express-nunjucks": "^2.2.3",
     "graphql": "^14.0.2",
-    "graphql-tag": "^2.10.0",
+    "graphql-tag": "^2.12.6",
     "node-fetch": "^2.6.1",
     "nunjucks": "^3.2.2"
   },
