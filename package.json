@@ -10,7 +10,7 @@
   "author": "Rohit Mishra",
   "license": "ISC",
   "dependencies": {
-    "@apollo/client": "^3.0.2",
+    "@apollo/client": "^3.6.8",
     "express": "^4.16.4",
     "express-nunjucks": "^2.2.3",
     "graphql": "^14.0.2",
