@@ -16,7 +16,7 @@
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
     "node-fetch": "^2.6.1",
-    "nunjucks": "^3.2.2"
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
     "nodemon": "^1.18.9"
