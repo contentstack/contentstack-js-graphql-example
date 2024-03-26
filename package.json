@@ -10,15 +10,15 @@
   "author": "Rohit Mishra",
   "license": "ISC",
   "dependencies": {
-    "@apollo/client": "^3.0.2",
-    "express": "^4.16.4",
-    "express-nunjucks": "^2.2.3",
-    "graphql": "^14.0.2",
-    "graphql-tag": "^2.10.0",
-    "node-fetch": "^2.6.1",
-    "nunjucks": "^3.2.2"
+    "@apollo/client": "^3.9.9",
+    "express": "^4.19.2",
+    "express-nunjucks": "^2.2.5",
+    "graphql": "^14.7.0",
+    "graphql-tag": "^2.12.6",
+    "node-fetch": "^2.7.0",
+    "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "nodemon": "^1.18.9"
+    "nodemon": "^3.1.0"
   }
 }
