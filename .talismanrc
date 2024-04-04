@@ -1,4 +1,6 @@
 fileignoreconfig:
+- filename: views/home.html
+  checksum: e85df560633696fe2f0956079c5ae22b0e697147976c86f8aafed4ef68550a1b
 - filename: package-lock.json
-  checksum: 8e4b948b20edd982bfa56dac741876ab2bfe53a04f246f222ebb8546d982b650
+  checksum: 35f1bff1b75ad7b261a3aeb753177f460929a9d5f7f73c2849f5ea6c462246b2
 version: ""
