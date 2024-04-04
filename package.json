@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@apollo/client": "^3.9.9",
+    "csurf": "^1.11.0",
     "express": "^4.19.2",
     "express-nunjucks": "^2.2.5",
     "graphql": "^14.7.0",
