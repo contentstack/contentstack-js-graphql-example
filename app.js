@@ -1,6 +1,7 @@
 const express = require('express');
 const expressNunjucks = require('express-nunjucks');
-const app = express()
+const app = express();
+const csurf = require('csurf');
 var { ApolloClient, InMemoryCache, HttpLink,from, gql } =  require('@apollo/client');
 var fetch = require('node-fetch');
 const port = process.env.PORT || 8000
@@ -25,7 +26,8 @@ const njk = expressNunjucks(app, {
     noCache: true
 });
 
-
+const csrfMiddleware = csurf({ cookie: true });
+app.use(csrfMiddleware);
 
 app.get('/', (req, res) => 
 
