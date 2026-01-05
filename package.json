@@ -1,6 +1,6 @@
 {
   "name": "testgraphqlworking",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Its a just a testing project on graphql",
   "main": "index.js",
   "scripts": {
@@ -10,16 +10,16 @@
   "author": "Rohit Mishra",
   "license": "ISC",
   "dependencies": {
-    "@apollo/client": "^3.9.11",
+    "@apollo/client": "^3.14.0",
     "csurf": "^1.11.0",
-    "express": "^4.19.2",
+    "express": "^4.22.1",
     "express-nunjucks": "^2.2.5",
-    "graphql": "^14.7.0",
+    "graphql": "^15.10.1",
     "graphql-tag": "^2.12.6",
     "node-fetch": "^2.7.0",
     "nunjucks": "^3.2.4"
   },
   "devDependencies": {
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.11"
   }
 }
