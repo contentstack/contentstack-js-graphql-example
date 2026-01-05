@@ -1,6 +1,6 @@
 {
   "name": "testgraphqlworking",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Its a just a testing project on graphql",
   "main": "index.js",
   "scripts": {
