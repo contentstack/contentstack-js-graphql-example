@@ -1,6 +1,7 @@
 const express = require('express');
 const expressNunjucks = require('express-nunjucks');
 const app = express();
+app.disable('x-powered-by');
 const csurf = require('csurf');
 var { ApolloClient, InMemoryCache, HttpLink,from, gql } =  require('@apollo/client');
 var fetch = require('node-fetch');
